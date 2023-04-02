@@ -1,6 +1,7 @@
 package com.ssungkim.web.service;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.streaming.SXSSFSheet;
@@ -24,6 +25,7 @@ public class FileService {
 	 * @param extension 저장 파일 확장자
 	 * @return 파일에 있는 모든 데이터가 저장된 {@code List<List<String>>} 객체 리턴
 	 */
+	@SuppressWarnings("YodaCondition")
 	public static List<List<String>> parsingFromFile(File file, String extension) {
 		String fileName = file.getName();
 		long time = System.currentTimeMillis();
@@ -99,6 +101,7 @@ public class FileService {
 	 * @param cell 엑셀 열 번호
 	 * @return row와 cell에 해당하는 cell에서 읽어온 문자열 리턴
 	 */
+	@SuppressWarnings("YodaCondition")
 	private static String getCellData(int row, Cell cell) {
 		if(cell == null) return "";
 		String imsi = "";
@@ -261,12 +264,14 @@ public class FileService {
 	 * @author Aiden Kim
 	 * @since v1.1.0
 	 * @param dataList 텍스트 파일에 한줄씩 입력될 {@code List<String>} 객체
-	 * @param filePath 텍스트 파일이 저장될 경로와 파일명
+	 * @param filePath 텍스트 파일이 저장될 경로
+	 * @param fileName 텍스트 파일이 저장될 파일명
 	 * @return {@code List<String>} 객체의 데이터가 저장된 파일 객체
 	 */
-	public static File createTextFile(List<String> dataList, String filePath) {
+	@SuppressWarnings("DefaultCharset")
+	public static File createTextFile(List<String> dataList, String filePath, String fileName) {
 		ClassPathResource resource = new ClassPathResource(filePath);
-		File f = new File(resource.getPath());
+		File f = new File(resource.getPath(), FilenameUtils.getName(fileName));
 		FileWriter fw = null;
 		BufferedWriter bw = null;
 		try {

@@ -1,5 +1,8 @@
 package com.ssungkim.web.service;
 
+import org.apache.commons.io.FilenameUtils;
+
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Properties;
@@ -20,8 +23,9 @@ public class PropertyService {
 		Properties properties = new Properties();
 		FileInputStream fis = null;
 		try {
-			String path = thisClass.getResource("/").getPath()+"/"+directory+"/"+file;
-			fis = new FileInputStream(path);
+			String path = thisClass.getResource("/").getPath()+"/"+directory+"/";
+			File f = new File(path, FilenameUtils.getName(file));
+			fis = new FileInputStream(f);
 			properties.load(fis);
 			return new String(properties.getProperty(key).getBytes("ISO-8859-1"), "UTF-8");
 		} catch(UnsupportedEncodingException e) {

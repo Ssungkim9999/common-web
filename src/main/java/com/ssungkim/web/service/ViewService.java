@@ -18,10 +18,11 @@ public class ViewService {
 	 * @return 일반적인 페이지 이동에 사용. 파라미터와 페이지 정보가 포함된 {@link ModelAndView} 객체 리턴
 	 * @throws NullPointerException 이동할 page가 없거나 올바르지 않은 경우
 	 */
+	@SuppressWarnings("YodaCondition")
 	public static ModelAndView returnPage(String viewName, String page, Map<String, Object> param, Class<?> className) throws NullPointerException {
 		ModelAndView mav = null;
 		if(viewName == null || "".equals(viewName.trim())) {
-			if(page == null || "".equals(page)) {
+			if(page == null || "".equals(page.trim())) {
 				LoggingService.info(className, "Page can not empty.");
 				throw new NullPointerException();
 			}
@@ -53,8 +54,9 @@ public class ViewService {
 	 * @return 오류 페이지 이동에 사용. 파라미터와 페이지 정보가 포함된 {@link ModelAndView} 객체 리턴
 	 * @throws NullPointerException 이동할 page가 없거나 올바르지 않은 경우
 	 */
+	@SuppressWarnings("YodaCondition")
 	public static ModelAndView returnError(String errorPage, int errorCode, Map<String, Object> param, Class<?> className) throws NullPointerException {
-		if(errorPage == null || "".equals(errorPage)) {
+		if(errorPage == null || "".equals(errorPage.trim())) {
 			LoggingService.info(className, "ErrorPage can not empty.");
 			throw new NullPointerException();
 		}
@@ -82,8 +84,9 @@ public class ViewService {
 	 * @return AJAX 호출 시 페이지 리턴에 사용. 파라미터와 페이지 정보가 포함된 {@link ModelAndView} 객체 리턴
 	 * @throws NullPointerException 이동할 page가 없거나 올바르지 않은 경우
 	 */
+	@SuppressWarnings("YodaCondition")
 	public static ModelAndView returnView(String page, Map<String, Object> param, Class<?> className) throws NullPointerException {
-		if(page == null || "".equals(page)) {
+		if(page == null || "".equals(page.trim())) {
 			LoggingService.info(className, "Page can not empty.");
 			throw new NullPointerException();
 		}

@@ -126,6 +126,7 @@ public class CommonService {
 	 * @param directory 저장 파일 경로
 	 * @param name 저장 파일 이름
 	 */
+	@SuppressWarnings("DefaultCharset")
 	public static void downloadFile(HttpServletResponse response, String directory, String name) {
 		File f = new File(directory, name);
 		FileInputStream fis = null;

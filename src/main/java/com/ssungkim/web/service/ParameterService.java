@@ -2,6 +2,7 @@ package com.ssungkim.web.service;
 
 import com.ssungkim.model.DataMap;
 import com.ssungkim.model.RegexType;
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.expression.ParseException;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -196,7 +197,7 @@ public class ParameterService {
 			throw new NullPointerException();
 		} else {
 			try {
-				f = new File(directory, name);
+				f = new File(directory, FilenameUtils.getName(name));
 				file.transferTo(f);
 				LoggingService.info(thisClass, "Success to make file about "+key+". Directory : "+directory+" / Name : "+name);
 			} catch(NotDirectoryException e) {
@@ -219,6 +220,7 @@ public class ParameterService {
 	 * @throws NullPointerException key에 해당하는 값이 없는 경우
 	 * @see RegexType
 	 */
+	@SuppressWarnings("AvoidObjectArrays")
 	public static String[] getRequestStringArray(HttpServletRequest req, String key) throws NullPointerException {
 		String[] ar = req.getParameterValues(key);
 		if(ar == null) {
