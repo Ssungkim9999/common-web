@@ -2,8 +2,9 @@ package com.ssungkim.web.service;
 
 import com.ssungkim.model.RegexType;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.regex.Matcher;
