@@ -1,6 +1,8 @@
 package com.ssungkim.web.service;
 
 import com.ssungkim.model.RegexType;
+import org.apache.commons.compress.compressors.FileNameUtil;
+import org.apache.commons.io.FilenameUtils;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
@@ -128,7 +130,7 @@ public class CommonService {
 	 */
 	@SuppressWarnings("DefaultCharset")
 	public static void downloadFile(HttpServletResponse response, String directory, String name) {
-		File f = new File(directory, name);
+		File f = new File(directory, FilenameUtils.getName(name));
 		FileInputStream fis = null;
 		ServletOutputStream sos = null;
 		try {

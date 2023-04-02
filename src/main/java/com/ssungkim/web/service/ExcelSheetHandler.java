@@ -14,6 +14,7 @@ import org.xml.sax.ContentHandler;
 import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
 
+import javax.xml.XMLConstants;
 import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -51,6 +52,7 @@ public class ExcelSheetHandler implements XSSFSheetXMLHandler.SheetContentsHandl
 
 			ContentHandler handler = new XSSFSheetXMLHandler(styles, strings, sheetHandler, false);
 			XMLReader xmlReader = SAXHelper.newXMLReader();
+			xmlReader.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
 			xmlReader.setContentHandler(handler);
 			xmlReader.parse(source);
 		} catch (Exception e) {
