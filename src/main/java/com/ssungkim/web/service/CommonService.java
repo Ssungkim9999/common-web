@@ -19,7 +19,7 @@ public class CommonService {
 	 * @since v1.0.0
 	 * @param type {@link RegexType}
 	 * @return 타입에 해당하는 정규식 문자열 리턴
-	 * @throws {@link IllegalArgumentException} 올바르지 않은 {@link RegexType}이 파라미터로 들어올 경우
+	 * @throws IllegalArgumentException 올바르지 않은 {@link RegexType}이 파라미터로 들어올 경우
 	 */
 	private static String regex(RegexType type) throws IllegalArgumentException {
 		String regex = "";
@@ -39,7 +39,7 @@ public class CommonService {
 	 * @param type {@link RegexType}
 	 * @param data 정규식을 체크하기 위한 값
 	 * @return 타입에 해당하는 정규식에 매칭되는 단어가 있는지 확인. 매칭되는 단어가 있을 경우 -1 리턴, 없을 경우 0 리턴. 만약 타입이 2 또는 3인 경우 매칭되는 단어가 있을 경우 0 리턴, 없을 경우 -1 리턴
-	 * @throws {@link IllegalArgumentException} 올바르지 않은 {@link RegexType}이 파라미터로 들어올 경우
+	 * @throws IllegalArgumentException 올바르지 않은 {@link RegexType}이 파라미터로 들어올 경우
 	 */
 	public static int checkMatchingRegexFromDaata(RegexType type, String data) throws IllegalArgumentException {
 		try{
@@ -63,7 +63,7 @@ public class CommonService {
 	 * @param type {@link RegexType}
 	 * @param data 정규식을 체크하기 위한 값
 	 * @return 타입에 해당하는 정규식에 매칭되는 단어를 빈 문자열로 치환한 문자열 리턴
-	 * @throws {@link IllegalArgumentException} 올바르지 않은 {@link RegexType}이 파라미터로 들어올 경우
+	 * @throws IllegalArgumentException 올바르지 않은 {@link RegexType}이 파라미터로 들어올 경우
 	 */
 	public static String replaceMatchingValueRegexFromData(RegexType type, String data) throws IllegalArgumentException {
 		try{
@@ -86,7 +86,7 @@ public class CommonService {
 	 * @param type {@link RegexType}
 	 * @param data 정규식을 체크하기 위한 값
 	 * @return data에 타입에 해당하는 정규식에 매칭되는 단어가 있을경우 해당 단어 리턴, 없을 경우 빈 문자열 리턴
-	 * @throws {@link IllegalArgumentException} 올바르지 않은 {@link RegexType}이 파라미터로 들어올 경우
+	 * @throws IllegalArgumentException 올바르지 않은 {@link RegexType}이 파라미터로 들어올 경우
 	 */
 	public static String getInvalidRegexValueFromData(RegexType type, String data) throws IllegalArgumentException {
 		try{

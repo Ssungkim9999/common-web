@@ -25,8 +25,8 @@ public class ParameterService {
 	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
 	 * @return key에 해당하는 문자열 값. 예상치 못한 예외 발생 시 null 리턴
-	 * @throws {@link NullPointerException} 파라미터에 해당 key가 없을 경우
-	 * @throws {@link IllegalArgumentException} 올바르지 않은 {@link RegexType}이 파라미터로 들어올 경우
+	 * @throws NullPointerException 파라미터에 해당 key가 없을 경우
+	 * @throws IllegalArgumentException 올바르지 않은 {@link RegexType}이 파라미터로 들어올 경우
 	 */
 	public static String getStringParameter(HttpServletRequest req, String key) throws NullPointerException, IllegalArgumentException {
 		String s = null;
@@ -51,9 +51,9 @@ public class ParameterService {
 	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
 	 * @return key에 해당하는 정수형 값. 예상치 못한 예외 발생 시 0 리턴
-	 * @throws {@link NullPointerException} 파라미터에 해당 key가 없을 경우
-	 * @throws {@link NumberFormatException} key에 해당하는 값의 형식이 숫자 형식이 아닐 경우
-	 * @throws {@link ParseException} key에 해당하는 값을 {@link Integer}로 parsing하지 못할 경우
+	 * @throws NullPointerException 파라미터에 해당 key가 없을 경우
+	 * @throws NumberFormatException key에 해당하는 값의 형식이 숫자 형식이 아닐 경우
+	 * @throws ParseException key에 해당하는 값을 {@link Integer}로 parsing하지 못할 경우
 	 * @see RegexType
 	 */
 	public static int getIntegerParameter(HttpServletRequest req, String key) throws NullPointerException, NumberFormatException, ParseException {
@@ -86,9 +86,9 @@ public class ParameterService {
 	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
 	 * @return key에 해당하는 긴 정수형 값. 예상치 못한 예외 발생 시 0L 리턴
-	 * @throws {@link NullPointerException} 파라미터에 해당 key가 없을 경우
-	 * @throws {@link NumberFormatException} key에 해당하는 값의 형식이 숫자 형식이 아닐 경우
-	 * @throws {@link ParseException} key에 해당하는 값을 {@link Long}으로 parsing하지 못할 경우
+	 * @throws NullPointerException 파라미터에 해당 key가 없을 경우
+	 * @throws NumberFormatException key에 해당하는 값의 형식이 숫자 형식이 아닐 경우
+	 * @throws ParseException key에 해당하는 값을 {@link Long}으로 parsing하지 못할 경우
 	 */
 	public static long getLongParameter(HttpServletRequest req, String key) throws NullPointerException, NumberFormatException, ParseException {
 		long n = 0L;
@@ -119,8 +119,8 @@ public class ParameterService {
 	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
 	 * @return key에 해당하는 논리형 값. 예상치 못한 예외 발생 시 false 리턴
-	 * @throws {@link NullPointerException} 파라미터에 해당 key가 없을 경우
-	 * @throws {@link ParseException} key에 해당하는 값을 {@link Boolean}으로 parsing하지 못할 경우
+	 * @throws NullPointerException 파라미터에 해당 key가 없을 경우
+	 * @throws ParseException key에 해당하는 값을 {@link Boolean}으로 parsing하지 못할 경우
 	 */
 	public static boolean getBooleanParameter(HttpServletRequest req, String key) throws NullPointerException, ParseException {
 		boolean b = false;
@@ -148,9 +148,9 @@ public class ParameterService {
 	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
 	 * @return key에 해당하는 실수형 값. 예상치 못한 예외 발생 시 0.0 리턴
-	 * @throws {@link NullPointerException} key에 해당하는 값이 없는 경우
-	 * @throws {@link NumberFormatException} key에 해당하는 값의 형식이 숫자 형식이 아닐 경우
-	 * @throws {@link ParseException} key에 해당하는 값을 {@link Double}로 parsing하지 못할 경우
+	 * @throws NullPointerException key에 해당하는 값이 없는 경우
+	 * @throws NumberFormatException key에 해당하는 값의 형식이 숫자 형식이 아닐 경우
+	 * @throws ParseException key에 해당하는 값을 {@link Double}로 parsing하지 못할 경우
 	 * @see RegexType
 	 */
 	public static double getDoubleParameter(HttpServletRequest req, String key) throws NullPointerException, NumberFormatException, ParseException {
@@ -185,8 +185,8 @@ public class ParameterService {
 	 * @param directory 저장될 파일 경로
 	 * @param name 저장될 파일 이름
 	 * @return directory와 name으로 저장된 파일 객체 리턴. 예상치 못한 예외 발생 시 null 리턴
-	 * @throws {@link NullPointerException} key에 해당하는 값이 없는 경우
-	 * @throws {@link NotDirectoryException} directory가 없거나 경로가 아닐 경우
+	 * @throws NullPointerException key에 해당하는 값이 없는 경우
+	 * @throws NotDirectoryException directory가 없거나 경로가 아닐 경우
 	 */
 	public static File getRequestFile(MultipartHttpServletRequest mreq, String key, String directory, String name) throws NullPointerException, NotDirectoryException {
 		MultipartFile file = mreq.getFile(key);
@@ -216,7 +216,7 @@ public class ParameterService {
 	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
 	 * @return key에 해당하는 문자열 값으로 이루어진 배열. 해당하는 파라미터 key가 없을 경우 길이가 0인 문자열 배열 리턴
-	 * @throws {@link NullPointerException} key에 해당하는 값이 없는 경우
+	 * @throws NullPointerException key에 해당하는 값이 없는 경우
 	 * @see RegexType
 	 */
 	public static String[] getRequestStringArray(HttpServletRequest req, String key) throws NullPointerException {
