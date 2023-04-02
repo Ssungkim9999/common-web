@@ -1,7 +1,6 @@
 package com.ssungkim.web.service;
 
 import com.ssungkim.model.RegexType;
-import org.apache.commons.compress.compressors.FileNameUtil;
 import org.apache.commons.io.FilenameUtils;
 
 import javax.servlet.ServletOutputStream;

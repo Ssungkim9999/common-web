@@ -2,7 +2,6 @@ package com.ssungkim.model;
 
 import com.ssungkim.web.service.CommonService;
 import com.ssungkim.web.service.LoggingService;
-import org.springframework.expression.ParseException;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -43,9 +42,8 @@ public class DataMap extends HashMap<String, Object> {
 	 * @return key에 해당하는 정수형 값. 예상치 못한 예외 발생 시 0 리턴
 	 * @throws NullPointerException key에 해당하는 값이 없는 경우
 	 * @throws NumberFormatException key에 해당하는 값의 형식이 숫자 형식이 아닐 경우
-	 * @throws ParseException key에 해당하는 값을 {@link Integer}로 parsing하지 못할 경우
 	 */
-	public int getInt(String key) throws NullPointerException, NumberFormatException, ParseException {
+	public int getInt(String key) throws NullPointerException, NumberFormatException {
 		int n = 0;
 		try {
 			Object o = get(key);
@@ -56,9 +54,6 @@ public class DataMap extends HashMap<String, Object> {
 			} catch(NumberFormatException e){
 				LoggingService.error(getClass(), e.getClass()+" for parsing data. Because value is not a number format. Key : "+key+" / Data : "+o, e);
 				throw new NumberFormatException();
-			} catch(ParseException e){
-				LoggingService.error(getClass(), e.getClass()+" for parsing data. Key : "+key+" / Data : "+o, e);
-				throw new ParseException(e.getPosition(), e.getMessage());
 			} catch(Exception e){
 				LoggingService.error(getClass(), e.getClass()+" for parsing data. Key : "+key, e);
 				return 0;
@@ -77,9 +72,8 @@ public class DataMap extends HashMap<String, Object> {
 	 * @return key에 해당하는 실수형 값. 예상치 못한 예외 발생 시 0.0 리턴
 	 * @throws NullPointerException key에 해당하는 값이 없는 경우
 	 * @throws NumberFormatException key에 해당하는 값의 형식이 숫자 형식이 아닐 경우
-	 * @throws ParseException key에 해당하는 값을 {@link Double}로 parsing하지 못할 경우
 	 */
-	public double getDouble(String key) throws NullPointerException, NumberFormatException, ParseException {
+	public double getDouble(String key) throws NullPointerException, NumberFormatException {
 		double n = 0.0;
 		try {
 			Object o = get(key);
@@ -90,9 +84,6 @@ public class DataMap extends HashMap<String, Object> {
 			} catch(NumberFormatException e){
 				LoggingService.error(getClass(), e.getClass()+" for parsing data. Because value is not a number format. Key : "+key+" / Data : "+o, e);
 				throw new NumberFormatException();
-			} catch(ParseException e){
-				LoggingService.error(getClass(), e.getClass()+" for parsing data. Key : "+key+" / Data : "+o, e);
-				throw new ParseException(e.getPosition(), e.getMessage());
 			} catch(Exception e){
 				LoggingService.error(getClass(), e.getClass()+" for parsing data. Key : "+key, e);
 				return 0.0;
@@ -110,17 +101,13 @@ public class DataMap extends HashMap<String, Object> {
 	 * @param key 가져올 데이터에 대한 key 문자열
 	 * @return key에 해당하는 논리형 값. 예상치 못한 예외 발생 시 false 리턴
 	 * @throws NullPointerException key에 해당하는 값이 없는 경우
-	 * @throws ParseException key에 해당하는 값을 {@link Boolean}으로 parsing하지 못할 경우
 	 */
-	public boolean getBoolean(String key) throws NullPointerException, ParseException {
+	public boolean getBoolean(String key) throws NullPointerException {
 		boolean b = false;
 		try {
 			Object o = get(key);
 			try{
 				b = Boolean.parseBoolean(o.toString().trim());
-			} catch(ParseException e){
-				LoggingService.error(getClass(), e.getClass()+" for parsing data. Key : "+key+" / Data : "+o, e);
-				throw new ParseException(e.getPosition(), e.getMessage());
 			} catch(Exception e){
 				LoggingService.error(getClass(), e.getClass()+"for parsing data. Key : "+key, e);
 				return false;
