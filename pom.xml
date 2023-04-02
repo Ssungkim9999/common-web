@@ -10,7 +10,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com. </groupId>
+	<groupId>com.github.ssungkim9999</groupId>
 	<artifactId>common-web</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>common-web</name>
