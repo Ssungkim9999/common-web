@@ -2,12 +2,12 @@ package com.ssungkim.web.service;
 
 import com.ssungkim.model.DataMap;
 import com.ssungkim.model.RegexType;
+import jakarta.servlet.http.HttpServletRequest;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.expression.ParseException;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.nio.file.NotDirectoryException;
 import java.util.List;
