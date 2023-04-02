@@ -2,7 +2,7 @@ package com.ssungkim.web.service;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
-import org.apache.poi.hssf.usermodel.HSSFDateUtil;
+import org.apache.poi.hssf.usermodel.HSSFDataFormat;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.streaming.SXSSFSheet;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
@@ -124,7 +124,7 @@ public class FileService {
 			case 186: // 기타(전화번호_국번 4자리) [(01) 2345-6789] -> [("total-8") 4-4]
 			case 187: // 기타(전화번호_국번 3자리) [(012) 345-6789] -> [("total-7") 3-4]
 			case 191: // 숫자 [123,456,789,00]
-				if(HSSFDateUtil.isInternalDateFormat(cellFormat)) {
+				if(HSSFDataFormat.getBuiltinFormats().equals(cellFormat)) {
 					String dateFmt = "";
 					if(cellFormat == 14) dateFmt = "yyyy-MM-dd";
 					else if(cellFormat == 21) dateFmt = "HH:mm:ss";
