@@ -19,15 +19,15 @@ public class ViewService {
 	 * @throws {@link NullPointerException} 이동할 page가 없거나 올바르지 않은 경우
 	 */
 	public static ModelAndView returnPage(String viewName, String page, Map<String, Object> param, Class<?> className) throws NullPointerException {
-		ModelAndView mav = new ModelAndView();
+		ModelAndView mav = null;
 		if(viewName == null || "".equals(viewName.trim())) {
 			if(page == null || "".equals(page)) {
 				LoggingService.info(className, "Page can not empty.");
 				throw new NullPointerException();
 			}
-			mav.setViewName("/WEB-INF/"+page+".jsp");
+			mav = new ModelAndView("/WEB-INF/"+page+".jsp");
 		} else {
-			mav.setViewName("/WEB-INF/"+viewName+".jsp");
+			mav = new ModelAndView("/WEB-INF/"+viewName+".jsp");
 			mav.addObject("page", "/WEB-INF/"+page+".jsp");
 		}
 		LoggingService.info(className, "Direction page ::: "+page);
@@ -58,8 +58,7 @@ public class ViewService {
 			LoggingService.info(className, "ErrorPage can not empty.");
 			throw new NullPointerException();
 		}
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName(errorPage);
+		ModelAndView mav = new ModelAndView(errorPage);
 		mav.addObject("errorCode", errorCode);
 		LoggingService.info(className, "Error code ::: "+errorCode);
 		if(param != null) {
@@ -88,8 +87,7 @@ public class ViewService {
 			LoggingService.info(className, "Page can not empty.");
 			throw new NullPointerException();
 		}
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("/WEB-INF/"+page+".jsp");
+		ModelAndView mav = new ModelAndView("/WEB-INF/"+page+".jsp");
 		LoggingService.info(className, "Direction page ::: "+page);
 		if(param != null) {
 			Set<String> set = param.keySet();
