@@ -22,15 +22,11 @@ public class ParameterService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param req HttpServletRequest
+	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
 	 * @return key에 해당하는 문자열 값. 예상치 못한 예외 발생 시 null 리턴
-	 * @throws NullPointerException
-	 * @throws IllegalArgumentException
-	 * @see CommonService#replaceMatchingValueRegexFromData(RegexType, String)
-	 * @see RegexType
-	 * @see NullPointerException
-	 * @see IllegalArgumentException
+	 * @throws {@link NullPointerException} 파라미터에 해당 key가 없을 경우
+	 * @throws {@link IllegalArgumentException} 올바르지 않은 {@link RegexType}이 파라미터로 들어올 경우
 	 */
 	public static String getStringParameter(HttpServletRequest req, String key) throws NullPointerException, IllegalArgumentException {
 		String s = null;
@@ -52,16 +48,13 @@ public class ParameterService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param req HttpServletRequest
+	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
 	 * @return key에 해당하는 정수형 값. 예상치 못한 예외 발생 시 0 리턴
-	 * @throws NullPointerException
-	 * @throws NumberFormatException
-	 * @throws ParseException
+	 * @throws {@link NullPointerException} 파라미터에 해당 key가 없을 경우
+	 * @throws {@link NumberFormatException} key에 해당하는 값의 형식이 숫자 형식이 아닐 경우
+	 * @throws {@link ParseException} key에 해당하는 값을 {@link Integer}로 parsing하지 못할 경우
 	 * @see RegexType
-	 * @see NullPointerException
-	 * @see NumberFormatException
-	 * @see ParseException
 	 */
 	public static int getIntegerParameter(HttpServletRequest req, String key) throws NullPointerException, NumberFormatException, ParseException {
 		int n = 0;
@@ -90,15 +83,12 @@ public class ParameterService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param req HttpServletRequest
+	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
 	 * @return key에 해당하는 긴 정수형 값. 예상치 못한 예외 발생 시 0L 리턴
-	 * @throws NullPointerException
-	 * @throws NumberFormatException
-	 * @throws ParseException
-	 * @see NullPointerException
-	 * @see NumberFormatException
-	 * @see ParseException
+	 * @throws {@link NullPointerException} 파라미터에 해당 key가 없을 경우
+	 * @throws {@link NumberFormatException} key에 해당하는 값의 형식이 숫자 형식이 아닐 경우
+	 * @throws {@link ParseException} key에 해당하는 값을 {@link Long}으로 parsing하지 못할 경우
 	 */
 	public static long getLongParameter(HttpServletRequest req, String key) throws NullPointerException, NumberFormatException, ParseException {
 		long n = 0L;
@@ -126,13 +116,13 @@ public class ParameterService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param req HttpServletRequest
+	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
 	 * @return key에 해당하는 논리형 값. 예상치 못한 예외 발생 시 false 리턴
-	 * @throws ParseException
-	 * @see ParseException
+	 * @throws {@link NullPointerException} 파라미터에 해당 key가 없을 경우
+	 * @throws {@link ParseException} key에 해당하는 값을 {@link Boolean}으로 parsing하지 못할 경우
 	 */
-	public static boolean getBooleanParameter(HttpServletRequest req, String key) throws ParseException {
+	public static boolean getBooleanParameter(HttpServletRequest req, String key) throws NullPointerException, ParseException {
 		boolean b = false;
 		try {
 			String s = getStringParameter(req, key);
@@ -155,16 +145,13 @@ public class ParameterService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param req HttpServletRequest
+	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
 	 * @return key에 해당하는 실수형 값. 예상치 못한 예외 발생 시 0.0 리턴
-	 * @throws NullPointerException
-	 * @throws NumberFormatException
-	 * @throws ParseException
+	 * @throws {@link NullPointerException} key에 해당하는 값이 없는 경우
+	 * @throws {@link NumberFormatException} key에 해당하는 값의 형식이 숫자 형식이 아닐 경우
+	 * @throws {@link ParseException} key에 해당하는 값을 {@link Double}로 parsing하지 못할 경우
 	 * @see RegexType
-	 * @see NullPointerException
-	 * @see NumberFormatException
-	 * @see ParseException
 	 */
 	public static double getDoubleParameter(HttpServletRequest req, String key) throws NullPointerException, NumberFormatException, ParseException {
 		double n = 0.0;
@@ -193,15 +180,13 @@ public class ParameterService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param mreq MultipartHttpServletRequest
+	 * @param mreq {@link MultipartHttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
 	 * @param directory 저장될 파일 경로
 	 * @param name 저장될 파일 이름
 	 * @return directory와 name으로 저장된 파일 객체 리턴. 예상치 못한 예외 발생 시 null 리턴
-	 * @throws NullPointerException
-	 * @throws NotDirectoryException
-	 * @see NullPointerException
-	 * @see NotDirectoryException
+	 * @throws {@link NullPointerException} key에 해당하는 값이 없는 경우
+	 * @throws {@link NotDirectoryException} directory가 없거나 경로가 아닐 경우
 	 */
 	public static File getRequestFile(MultipartHttpServletRequest mreq, String key, String directory, String name) throws NullPointerException, NotDirectoryException {
 		MultipartFile file = mreq.getFile(key);
@@ -228,12 +213,11 @@ public class ParameterService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param req HttpServletRequest
+	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
 	 * @return key에 해당하는 문자열 값으로 이루어진 배열. 해당하는 파라미터 key가 없을 경우 길이가 0인 문자열 배열 리턴
-	 * @throws NullPointerException
+	 * @throws {@link NullPointerException} key에 해당하는 값이 없는 경우
 	 * @see RegexType
-	 * @see NullPointerException
 	 */
 	public static String[] getRequestStringArray(HttpServletRequest req, String key) throws NullPointerException {
 		String[] ar = req.getParameterValues(key);
@@ -254,9 +238,8 @@ public class ParameterService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param req HttpServletRequest
-	 * @return 모든 파라미터의 key와 value으로 이루어진 {@code DataMap} 객체 리턴
-	 * @see DataMap
+	 * @param req {@link HttpServletRequest}
+	 * @return 모든 파라미터의 key와 value으로 이루어진 {@link DataMap} 객체 리턴
 	 */
 	public static DataMap makeAllParameter(HttpServletRequest req) {
 		DataMap param = new DataMap();
@@ -272,8 +255,8 @@ public class ParameterService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param req HttpServletRequest
-	 * @return 모든 파라미터의 value를 포함한 {@code List<Object>} 객체 리턴
+	 * @param req {@link HttpServletRequest}
+	 * @return 모든 파라미터의 value를 포함한 {@link List<Object>} 객체 리턴
 	 */
 	public static List<Object> makeAllParameterToList(HttpServletRequest req) {
 		List<Object> params = new ArrayList<Object>();
@@ -291,8 +274,7 @@ public class ParameterService {
 	 * @param page 현재 페이지
 	 * @param count 총 데이터 개수
 	 * @param countPerPage 한 페이지에 보여질 데이터 개수
-	 * @return 파라미터로 받은 DataMap 객체에 페이징 처리를 위한 데이터가 계산된 내용을 포함한 {@code DataMap} 객체 리턴
-	 * @see DataMap
+	 * @return 파라미터로 받은 {@link DataMap} 객체에 페이징 처리를 위한 데이터가 계산된 내용을 포함한 {@link DataMap} 객체 리턴
 	 */
 	public static DataMap settingPageData(DataMap map, int page, int count, int countPerPage) {
 		int first = page == 1 ? 0 : 1;
@@ -315,8 +297,7 @@ public class ParameterService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param req HttpServletRequest
-	 * Aiden Kim
+	 * @param req {@link HttpServletRequest}
 	 */
 	public static void printAllParameters(HttpServletRequest req) {
 		LoggingService.info(thisClass, "### Start Print All Parameters ###");

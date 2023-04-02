@@ -11,7 +11,7 @@ public class LoggingService {
 	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param className 로깅 처리될 클래스
-	 * @return 로깅 처리를 진행할 Logger 객체
+	 * @return 로깅 처리를 진행할 {@link Logger} 객체
 	 * @see Logger
 	 */
 	private static Logger createLogger(Class<?> className) {
@@ -43,7 +43,7 @@ public class LoggingService {
 	 * @since v1.0.0
 	 * @param className 로깅 처리될 클래스
 	 * @param logData Error 레벨로 로깅 처리될 문자열
-	 * @param e 발생한 Exception 클래스
+	 * @param e 발생한 {@code Exception} 클래스
 	 */
 	public static void error(Class<?> className, String logData, Exception e) {
 		createLogger(className).error(logData);

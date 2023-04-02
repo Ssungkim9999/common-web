@@ -30,8 +30,7 @@ public class DataMap extends HashMap<String, Object> {
 	 * @since v1.0.0
 	 * @param key 가져올 데이터에 대한 key 문자열
 	 * @return key에 해당하는 trim 처리된 문자열 값
-	 * @throws NullPointerException
-	 * @see NullPointerException
+	 * @throws {@link NullPointerException} key에 해당하는 값이 없는 경우
 	 */
 	public String getString(String key) throws NullPointerException {
 		return get(key).toString().trim();
@@ -42,12 +41,9 @@ public class DataMap extends HashMap<String, Object> {
 	 * @since v1.0.0
 	 * @param key 가져올 데이터에 대한 key 문자열
 	 * @return key에 해당하는 정수형 값. 예상치 못한 예외 발생 시 0 리턴
-	 * @throws NullPointerException
-	 * @throws NumberFormatException
-	 * @throws ParseException
-	 * @see NullPointerException
-	 * @see NumberFormatException
-	 * @see ParseException
+	 * @throws {@linke NullPointerException} key에 해당하는 값이 없는 경우
+	 * @throws {@link NumberFormatException} key에 해당하는 값의 형식이 숫자 형식이 아닐 경우
+	 * @throws {@link ParseException} key에 해당하는 값을 {@link Integer}로 parsing하지 못할 경우
 	 */
 	public int getInt(String key) throws NullPointerException, NumberFormatException, ParseException {
 		int n = 0;
@@ -79,12 +75,9 @@ public class DataMap extends HashMap<String, Object> {
 	 * @since v1.0.0
 	 * @param key 가져올 데이터에 대한 key 문자열
 	 * @return key에 해당하는 실수형 값. 예상치 못한 예외 발생 시 0.0 리턴
-	 * @throws NullPointerException
-	 * @throws NumberFormatException
-	 * @throws ParseException
-	 * @see NullPointerException
-	 * @see NumberFormatException
-	 * @see ParseException
+	 * @throws {@link NullPointerException} key에 해당하는 값이 없는 경우
+	 * @throws {@link NumberFormatException} key에 해당하는 값의 형식이 숫자 형식이 아닐 경우
+	 * @throws {@link ParseException} key에 해당하는 값을 {@link Double}로 parsing하지 못할 경우
 	 */
 	public double getDouble(String key) throws NullPointerException, NumberFormatException, ParseException {
 		double n = 0.0;
@@ -116,10 +109,8 @@ public class DataMap extends HashMap<String, Object> {
 	 * @since v1.0.0
 	 * @param key 가져올 데이터에 대한 key 문자열
 	 * @return key에 해당하는 논리형 값. 예상치 못한 예외 발생 시 false 리턴
-	 * @throws NullPointerException
-	 * @throws ParseException
-	 * @see NullPointerException
-	 * @see ParseException
+	 * @throws {@link NullPointerException} key에 해당하는 값이 없는 경우
+	 * @throws {@link ParseException} key에 해당하는 값을 {@link Boolean}으로 parsing하지 못할 경우
 	 */
 	public boolean getBoolean(String key) throws NullPointerException, ParseException {
 		boolean b = false;
@@ -146,10 +137,8 @@ public class DataMap extends HashMap<String, Object> {
 	 * @since v1.0.0
 	 * @param key 가져올 데이터에 대한 key 문자열
 	 * @return key에 해당하는 파일 객체. 예상치 못한 예외 발생 시 null 리턴
-	 * @throws NullPointerException
-	 * @throws ClassCastException
-	 * @see NullPointerException
-	 * @see ClassCastException
+	 * @throws {@link NullPointerException} key에 해당하는 값이 없는 경우
+	 * @throws {@link ClassCastException} key에 해당하는 값을 {@link File}객체로 casting하지 못할 경우
 	 */
 	public File getFile(String key) throws NullPointerException, ClassCastException {
 		File f = null;

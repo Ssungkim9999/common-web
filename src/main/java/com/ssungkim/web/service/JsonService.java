@@ -20,8 +20,7 @@ public class JsonService {
 	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param file 저장 파일 이름(확장자가 포함된 JSON 파일). ex) static/json/test.json
-	 * @return JsonObject 파일에서 읽어온 데이터를 이용해 생성된 JsonObject 객체
-	 * @see JsonObject
+	 * @return {@link JsonObject} 파일에서 읽어온 데이터를 이용해 생성된 {@link JsonObject}
 	 */
 	public static JsonObject getJson(String file) {
 		FileReader reader = null;
@@ -44,8 +43,7 @@ public class JsonService {
 	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param jsonString JSON 형식으로 이루어진 문자열
-	 * @return JSON 형식으로 이루어진 문자열에서 변환한 JsonObject
-	 * @see JsonObject
+	 * @return JSON 형식으로 이루어진 문자열에서 변환한 {@link JsonObject}
 	 */
 	public static JsonObject stringToJson(String jsonString) {
 		try {
@@ -60,7 +58,7 @@ public class JsonService {
 	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param json Map 형식으로 변환할 JsonObject
-	 * @return JsonObject의 데이터를 저장한 {@code Map<String, Object>} 객체
+	 * @return {@link JsonObject}의 데이터를 저장한 {@link Map<String, Object>}
 	 */
 	public static Map<String, Object> jsonToMap(JsonObject json) {
 		Set<String> keySet = json.keySet();

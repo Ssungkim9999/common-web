@@ -17,11 +17,9 @@ public class CommonService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param type RegExType
+	 * @param type {@link RegexType}
 	 * @return 타입에 해당하는 정규식 문자열 리턴
-	 * @throws IllegalArgumentException
-	 * @see com.ssungkim.model.RegexType
-	 * @see IllegalArgumentException
+	 * @throws {@link IllegalArgumentException} 올바르지 않은 {@link RegexType}이 파라미터로 들어올 경우
 	 */
 	private static String regex(RegexType type) throws IllegalArgumentException {
 		String regex = "";
@@ -38,12 +36,10 @@ public class CommonService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param type RegexType
+	 * @param type {@link RegexType}
 	 * @param data 정규식을 체크하기 위한 값
 	 * @return 타입에 해당하는 정규식에 매칭되는 단어가 있는지 확인. 매칭되는 단어가 있을 경우 -1 리턴, 없을 경우 0 리턴. 만약 타입이 2 또는 3인 경우 매칭되는 단어가 있을 경우 0 리턴, 없을 경우 -1 리턴
-	 * @throws IllegalArgumentException
-	 * @see RegexType
-	 * @see IllegalArgumentException
+	 * @throws {@link IllegalArgumentException} 올바르지 않은 {@link RegexType}이 파라미터로 들어올 경우
 	 */
 	public static int checkMatchingRegexFromDaata(RegexType type, String data) throws IllegalArgumentException {
 		try{
@@ -64,12 +60,10 @@ public class CommonService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param type RegexType
+	 * @param type {@link RegexType}
 	 * @param data 정규식을 체크하기 위한 값
 	 * @return 타입에 해당하는 정규식에 매칭되는 단어를 빈 문자열로 치환한 문자열 리턴
-	 * @throws IllegalArgumentException
-	 * @see RegexType
-	 * @see IllegalArgumentException
+	 * @throws {@link IllegalArgumentException} 올바르지 않은 {@link RegexType}이 파라미터로 들어올 경우
 	 */
 	public static String replaceMatchingValueRegexFromData(RegexType type, String data) throws IllegalArgumentException {
 		try{
@@ -89,12 +83,10 @@ public class CommonService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param type RegexType
+	 * @param type {@link RegexType}
 	 * @param data 정규식을 체크하기 위한 값
 	 * @return data에 타입에 해당하는 정규식에 매칭되는 단어가 있을경우 해당 단어 리턴, 없을 경우 빈 문자열 리턴
-	 * @throws IllegalArgumentException
-	 * @see RegexType
-	 * @see IllegalArgumentException
+	 * @throws {@link IllegalArgumentException} 올바르지 않은 {@link RegexType}이 파라미터로 들어올 경우
 	 */
 	public static String getInvalidRegexValueFromData(RegexType type, String data) throws IllegalArgumentException {
 		try{
@@ -115,7 +107,7 @@ public class CommonService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param request HttpServletRequest
+	 * @param request {@link HttpServletRequest}
 	 * @return request의 header에서 X-FORWARDED-FOR, Proxy-Client-IP, WL-Proxy-Client-IP, getRemoteAddr()의 값을 이용해 IP 문자열 리턴. IP가 로컬호스트에 해당하는 IP일 경우 개발 공용 IP 문자열 리턴
 	 */
 	public static String getClientIP(HttpServletRequest request) {
@@ -130,7 +122,7 @@ public class CommonService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param response HttpServletResponse
+	 * @param response {@link HttpServletResponse}
 	 * @param directory 저장 파일 경로
 	 * @param name 저장 파일 이름
 	 */
@@ -167,10 +159,10 @@ public class CommonService {
 	/**
 	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param e Exception
+	 * @param e {@link Exception}
 	 * @param type DB 쿼리 타입. ex) select, insert 등
 	 * @param query xml 파일 등에 정의된 DB 쿼리 명, ID 등
-	 * @return String DB 처리 에러 로깅을 위한 문자열 리턴
+	 * @return DB 처리 에러 로깅을 위한 {@link String} value 리턴
 	 */
 	public static String stringForDbException(Exception e, String type, String query) {
 		return e.getClass()+" for "+type+" data for ["+query+"]";
