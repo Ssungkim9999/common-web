@@ -7,8 +7,10 @@
 	<groupId>io.github.Ssungkim9999</groupId>
 	<artifactId>common-web</artifactId>
 	<version>1.0.0</version>
+	<packaging>jar</packaging>
 	<name>common-web</name>
 	<description>common library for Web by Spring Boot</description>
+	<url>https://github.com/Ssungkim9999/common-web</url>
 
 	<properties>
 		<java.version>17</java.version>
@@ -21,6 +23,19 @@
 			<email>ssungkim@kakao.com</email>
 		</developer>
 	</developers>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<scm>
+		<connection>scm:git:https://github.com/Ssungkim9999/common-web.git</connection>
+		<developerConnection>scm:git:https://github.com/Ssungkim9999/common-web.git</developerConnection>
+		<url>https://github.com/Ssungkim9999/common-web.git</url>
+	</scm>
 
 	<dependencies>
 		<dependency>
@@ -102,10 +117,6 @@
 						<target>${java.version}</target>
 						<compilerVersion>${java.version}</compilerVersion>
 					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-maven-plugin</artifactId>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
