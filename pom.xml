@@ -10,9 +10,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.github.ssungkim9999</groupId>
-	<artifactId>common-web</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<groupId>io.github.ssungkim9999</groupId>
+<artifactId>common-web</artifactId>
+<version>1.0.0-SNAPSHOT</version>
 	<name>common-web</name>
 	<description>common library for Web by Spring Boot</description>
 
