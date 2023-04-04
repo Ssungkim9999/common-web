@@ -6,7 +6,7 @@
 
 	<groupId>io.github.Ssungkim9999</groupId>
 	<artifactId>common-web</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.2</version>
 	<packaging>jar</packaging>
 	<name>common-web</name>
 	<description>common library for Web by Spring Boot</description>
