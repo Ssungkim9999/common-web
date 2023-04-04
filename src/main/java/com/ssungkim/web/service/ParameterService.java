@@ -21,7 +21,6 @@ public class ParameterService {
 	private static Class<ParameterService> thisClass = ParameterService.class;
 
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
@@ -47,7 +46,6 @@ public class ParameterService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
@@ -82,7 +80,6 @@ public class ParameterService {
 	}
 
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
@@ -115,7 +112,6 @@ public class ParameterService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
@@ -144,7 +140,6 @@ public class ParameterService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
@@ -179,7 +174,6 @@ public class ParameterService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param mreq {@link MultipartHttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
@@ -212,7 +206,6 @@ public class ParameterService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param req {@link HttpServletRequest}
 	 * @param key 파라미터 가져올 key 문자열
@@ -238,7 +231,6 @@ public class ParameterService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param req {@link HttpServletRequest}
 	 * @return 모든 파라미터의 key와 value으로 이루어진 {@link DataMap} 객체 리턴
@@ -255,7 +247,6 @@ public class ParameterService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param req {@link HttpServletRequest}
 	 * @return 모든 파라미터의 value를 포함한 {@link List<Object>} 객체 리턴
@@ -270,7 +261,6 @@ public class ParameterService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param map 파라미터로 넘겨줄 데이터를 포함한 DataMap 객체
 	 * @param page 현재 페이지
@@ -297,7 +287,6 @@ public class ParameterService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param req {@link HttpServletRequest}
 	 */

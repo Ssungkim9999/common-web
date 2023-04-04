@@ -9,7 +9,6 @@ import java.io.FileReader;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.Set;
 
 public class JsonService {
@@ -17,7 +16,6 @@ public class JsonService {
 	private static Class<JsonService> thisClass = JsonService.class;
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param file 저장 파일 이름(확장자가 포함된 JSON 파일). ex) static/json/test.json
 	 * @return {@link JsonObject} 파일에서 읽어온 데이터를 이용해 생성된 {@link JsonObject}
@@ -40,7 +38,6 @@ public class JsonService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param jsonString JSON 형식으로 이루어진 문자열
 	 * @return JSON 형식으로 이루어진 문자열에서 변환한 {@link JsonObject}
@@ -55,15 +52,14 @@ public class JsonService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
-	 * @param json Map 형식으로 변환할 JsonObject
-	 * @return {@link JsonObject}의 데이터를 저장한 {@link Map<String, Object>}
+	 * @param json HashMap 형식으로 변환할 JsonObject
+	 * @return {@link JsonObject}의 데이터를 저장한 {@link HashMap<String, Object>}
 	 */
-	public static Map<String, Object> jsonToMap(JsonObject json) {
+	public static HashMap<String, Object> jsonToMap(JsonObject json) {
 		Set<String> keySet = json.keySet();
 		Iterator<String> it = keySet.iterator();
-		Map<String, Object> map = new HashMap<String, Object>();
+		HashMap<String, Object> map = new HashMap<>();
 		while(it.hasNext()) {
 			String key = it.next();
 			Object value = json.get(key);

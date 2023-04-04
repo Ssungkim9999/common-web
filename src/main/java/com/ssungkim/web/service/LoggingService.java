@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 public class LoggingService {
 
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param className 로깅 처리될 클래스
 	 * @return 로깅 처리를 진행할 {@link Logger} 객체
@@ -19,7 +18,6 @@ public class LoggingService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param className 로깅 처리될 클래스
 	 * @param logData Info 레벨로 로깅 처리될 문자열
@@ -29,7 +27,6 @@ public class LoggingService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param className 로깅 처리될 클래스
 	 * @param logData Debug 레벨로 로깅 처리될 문자열
@@ -39,7 +36,6 @@ public class LoggingService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param className 로깅 처리될 클래스
 	 * @param logData Error 레벨로 로깅 처리될 문자열
@@ -51,7 +47,6 @@ public class LoggingService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param className 로깅 처리될 클래스
 	 * @return Info 레벨의 로깅 처리가 가능할 경우 true 리턴, 아닐 경우 false 리턴

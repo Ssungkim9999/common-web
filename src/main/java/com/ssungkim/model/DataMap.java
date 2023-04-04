@@ -8,7 +8,6 @@ import java.io.File;
 import java.util.HashMap;
 
 /**
- * @author Aiden Kim
  * @since v1.0.0
  * @see HashMap
  * @serial
@@ -25,7 +24,6 @@ public class DataMap extends HashMap<String, Object> {
 	}
 
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param key 가져올 데이터에 대한 key 문자열
 	 * @return key에 해당하는 trim 처리된 문자열 값
@@ -34,9 +32,8 @@ public class DataMap extends HashMap<String, Object> {
 	public String getString(String key) throws NullPointerException {
 		return get(key).toString().trim();
 	}
-	
+
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param key 가져올 데이터에 대한 key 문자열
 	 * @return key에 해당하는 정수형 값. 예상치 못한 예외 발생 시 0 리턴
@@ -64,9 +61,8 @@ public class DataMap extends HashMap<String, Object> {
 		}
 		return n;
 	}
-	
+
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param key 가져올 데이터에 대한 key 문자열
 	 * @return key에 해당하는 실수형 값. 예상치 못한 예외 발생 시 0.0 리턴
@@ -94,9 +90,8 @@ public class DataMap extends HashMap<String, Object> {
 		}
 		return n;
 	}
-	
+
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param key 가져올 데이터에 대한 key 문자열
 	 * @return key에 해당하는 논리형 값. 예상치 못한 예외 발생 시 false 리턴
@@ -118,9 +113,8 @@ public class DataMap extends HashMap<String, Object> {
 		}
 		return b;
 	}
-	
+
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param key 가져올 데이터에 대한 key 문자열
 	 * @return key에 해당하는 파일 객체. 예상치 못한 예외 발생 시 null 리턴

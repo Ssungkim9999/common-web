@@ -31,7 +31,6 @@ public class ExcelSheetHandler implements XSSFSheetXMLHandler.SheetContentsHandl
 	private List<String> rowData = new ArrayList<String>();
 		
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param file 저장 파일
 	 * @return ExcelSheetHandler 객체
@@ -65,7 +64,6 @@ public class ExcelSheetHandler implements XSSFSheetXMLHandler.SheetContentsHandl
     }
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @return 파일에 있는 모든 셀 데이터가 저장된 {@code List<List<String>>} 객체 리턴
 	 */

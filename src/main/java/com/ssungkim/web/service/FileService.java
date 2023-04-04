@@ -19,7 +19,6 @@ public class FileService {
 	private static Class<FileService> thisClass = FileService.class;
 
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param file 저장 파일
 	 * @param extension 저장 파일 확장자
@@ -95,7 +94,6 @@ public class FileService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param row 엑셀 행 번호
 	 * @param cell 엑셀 열 번호
@@ -183,7 +181,6 @@ public class FileService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param file 저장 파일
 	 * @return 파일 인코딩 문자열 리턴
@@ -209,7 +206,6 @@ public class FileService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param wb SXSSFWorkbook
 	 * @param valueData 엑셀에 쓰기 위한 데이터가 포함된 {@code List<List<String>>} 객체
@@ -261,7 +257,6 @@ public class FileService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.1.0
 	 * @param dataList 텍스트 파일에 한줄씩 입력될 {@code List<String>} 객체
 	 * @param filePath 텍스트 파일이 저장될 경로

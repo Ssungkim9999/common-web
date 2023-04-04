@@ -16,7 +16,6 @@ public class CommonService {
 	private static Class<CommonService> thisClass = CommonService.class;
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param type {@link RegexType}
 	 * @return 타입에 해당하는 정규식 문자열 리턴
@@ -35,7 +34,6 @@ public class CommonService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param type {@link RegexType}
 	 * @param data 정규식을 체크하기 위한 값
@@ -59,7 +57,6 @@ public class CommonService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param type {@link RegexType}
 	 * @param data 정규식을 체크하기 위한 값
@@ -82,7 +79,6 @@ public class CommonService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param type {@link RegexType}
 	 * @param data 정규식을 체크하기 위한 값
@@ -106,7 +102,6 @@ public class CommonService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param request {@link HttpServletRequest}
 	 * @return request의 header에서 X-FORWARDED-FOR, Proxy-Client-IP, WL-Proxy-Client-IP, getRemoteAddr()의 값을 이용해 IP 문자열 리턴. IP가 로컬호스트에 해당하는 IP일 경우 개발 공용 IP 문자열 리턴
@@ -121,7 +116,6 @@ public class CommonService {
 	 }
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param response {@link HttpServletResponse}
 	 * @param directory 저장 파일 경로
@@ -159,7 +153,6 @@ public class CommonService {
 	}
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param e {@link Exception}
 	 * @param type DB 쿼리 타입. ex) select, insert 등

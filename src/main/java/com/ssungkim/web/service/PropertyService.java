@@ -12,7 +12,6 @@ public class PropertyService {
 	private static Class<PropertyService> thisClass = PropertyService.class;
 	
 	/**
-	 * @author Aiden Kim
 	 * @since v1.0.0
 	 * @param file 확장자를 포함한 저장된 파일 명
 	 * @param directory 저장된 파일 경로
