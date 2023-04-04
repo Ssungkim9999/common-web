@@ -9,7 +9,7 @@
 	<version>1.0.2</version>
 	<packaging>jar</packaging>
 	<name>common-web</name>
-	<description>common library for Web by Spring Boot</description>
+	<description>common library for Web by Spring Framework</description>
 	<url>https://github.com/Ssungkim9999/common-web</url>
 
 	<properties>
