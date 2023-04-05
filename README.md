@@ -7,7 +7,6 @@ Common-Web is a library that provides a collection of frequently used methods wh
 # Getting Started
 To use Web Service Helper for Java with Maven, you can add the following dependency to your pom.xml file:
 ```xml
-
 <dependency>
   <groupId>io.github.Ssungkim9999</groupId>
   <artifactId>common-web</artifactId>
@@ -24,7 +23,7 @@ returnPage: This method moves to a view page, given as a parameter, including al
 And more..
 
 # Usage
-To use Common-web, simply import the library into your Java project and call the methods you need. For example:
+To use Common-Web, simply import the library into your Java project and call the methods you need. For example:
 ```java
 import com.example.webservicehelper.*;
 
