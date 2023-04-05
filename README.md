@@ -6,12 +6,19 @@ Common-Web is a library that provides a collection of frequently used methods wh
 
 # Getting Started
 To use Web Service Helper for Java with Maven, you can add the following dependency to your pom.xml file:
+### Using Maven
 ```xml
 <dependency>
   <groupId>io.github.Ssungkim9999</groupId>
   <artifactId>common-web</artifactId>
   <version>${common-web-version}</version>
 </dependency>
+```
+### Using Gradle
+```groovy
+dependencies {
+    implementation 'com.example:webservicehelper:1.0.0'
+}
 ```
 
 # Features
