@@ -45,8 +45,8 @@ public class ViewService {
 
 	/**
 	 * @since v1.0.0
-	 * @param errorCode HTTP 상태 코드
 	 * @param errorPage 확장자를 포함하지 않는 /WEB-INF 이후 JSP 에러 파일 경로. 만약 이 파라미터가 null 이거나 빈 문자열일 경우 PageNotFoundException 던짐
+	 * @param errorCode HTTP 상태 코드
 	 * @param param 페이지에 같이 전달될 {@link HashMap<String, Object>} 객체
 	 * @param className 로깅 처리될 클래스
 	 * @return 오류 페이지 이동에 사용. 파라미터와 페이지 정보가 포함된 {@link ModelAndView} 객체 리턴
