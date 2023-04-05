@@ -1,5 +1,7 @@
 <img src="https://capsule-render.vercel.app/api?type=slice&color=auto&height=150&section=header&text=Common-Web&fontSize=70" />
-# Common-Web - Web Service Helper for Java
+
+# Common-Web
+### Web Service Helper for Java
 Common-Web is a library that provides a collection of frequently used methods when creating web services. It aims to simplify the process of building and maintaining web services by providing a convenient set of tools that developers can use.
 
 # Getting Started
