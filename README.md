@@ -25,9 +25,9 @@ dependencies {
 # Features
 Common-Web provides the following features:
 
-getJson: This method gets data from a file in JsonObject format, given as a parameter, and returns it.
-parsingFromFile: This method reads all the data in a file, regardless of its format, and returns it as a list of exact values of all cell data.
-returnPage: This method moves to a view page, given as a parameter, including all parameter parameters.
+* getJson: This method gets data from a file in JsonObject format, given as a parameter, and returns it.
+* parsingFromFile: This method reads all the data in a file, regardless of its format, and returns it as a list of exact values of all cell data.
+* returnPage: This method moves to a view page, given as a parameter, including all parameter parameters.
 And more..
 
 # Usage
