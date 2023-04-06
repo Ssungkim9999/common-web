@@ -29,7 +29,7 @@ Common-Web provides the following features:
 * parsingFromFile: This method reads all the data in a file, regardless of its format, and returns it as a list of exact values of all cell data.
 * returnPage: This method moves to a view page, given as a parameter, including all parameter parameters.
 
-And Common-Web have more other methods in addition to above methods
+And Common-Web have more other methods in addition to above methods.
 
 # Usage
 To use Common-Web, simply import the library into your Java project and call the methods you need. For example:
