@@ -11,7 +11,7 @@ To use Web Service Helper for Java with Maven, you can add the following depende
 <dependency>
   <groupId>io.github.Ssungkim9999</groupId>
   <artifactId>common-web</artifactId>
-  <version>${common-web-version}</version>
+  <version>1.0.3</version>
 </dependency>
 ```
 ### Using Gradle
