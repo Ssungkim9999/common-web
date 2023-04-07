@@ -17,8 +17,17 @@ To use Web Service Helper for Java with Maven, you can add the following depende
 ### Using Gradle
 To use Common-Web with Gradle, you can add the following dependency to your **build.gradle** file:
 ```groovy
+Gradle
 dependencies {
-    implementation 'com.example:webservicehelper:1.0.0'
+    implementation group: 'io.github.Ssungkim9999', name: 'common-web', version: '1.0.3'
+}
+Gradle (short)
+dependencies {
+    implementation 'io.github.Ssungkim9999:common-web:1.0.3'
+}
+Gradle (Kotlin)
+dependencies {
+    implementation("io.github.Ssungkim9999:common-web:1.0.3")
 }
 ```
 
