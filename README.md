@@ -56,3 +56,18 @@ ViewService.returnPage("layoutPage.jsp", "viewPage.jsp", parameterMap, caller.cl
 
 # License
 Common-Web is licensed under the Apache License. Please see the LICENSE file for more information.
+
+
+# Depends on the following frameworks:
+|Framework|Version|
+|---|---|
+|Spring-core|6.0.7|
+|Spring-web|6.0.7|
+|Spring-context|6.0.7|
+|Spring-boot-starter-tomcat|3.0.5|
+|poi|5.2.2|
+|poi-ooxml|5.2.2|
+|commons-io|1.0.3|
+|juniversalchardet|1.0.3|
+|gson|2.10.1|
+|slf4j-api|2.0.7|
