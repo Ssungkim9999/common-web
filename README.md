@@ -47,8 +47,6 @@ And Common-Web have more other methods in addition to above methods.
 # Usage
 To use Common-Web, simply import the library into your Java project and call the methods you need. For example:
 ```java
-import com.example.webservicehelper.*;
-
 JsonObject json = JsonService.getJson("data.json");
 List<String> data = FileService.parsingFromFile("data", "xlsx");
 ViewService.returnPage("layoutPage.jsp", "viewPage.jsp", parameterMap, caller.class);
