@@ -13,7 +13,7 @@ import java.util.Set;
 
 public class JsonService {
 
-	private static Class<JsonService> thisClass = JsonService.class;
+	private static final Class<JsonService> thisClass = JsonService.class;
 	
 	/**
 	 * @since v1.0.0

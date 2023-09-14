@@ -18,7 +18,7 @@ import java.util.Iterator;
 
 public class ParameterService {
 	
-	private static Class<ParameterService> thisClass = ParameterService.class;
+	private static final Class<ParameterService> thisClass = ParameterService.class;
 
 	/**
 	 * @since v1.0.0
@@ -33,7 +33,7 @@ public class ParameterService {
 		try {
 			s = req.getParameter(key);
 			try {
-				 s = CommonService.replaceMatchingValueRegexFromData(RegexType.EXPRESSION, req.getParameter(key).toString());
+				 s = CommonService.replaceMatchingValueRegexFromData(RegexType.EXPRESSION, req.getParameter(key));
 			} catch(Exception e) {
 				LoggingService.error(thisClass, e.getClass()+" for parsing String data from request. Key : "+key+" / Data : "+req.getParameter(key), e);
 				return null;
@@ -272,7 +272,7 @@ public class ParameterService {
 		int first = page == 1 ? 0 : 1;
 		int last = count%countPerPage == 0 ? count/countPerPage : count/countPerPage+1;
 		int start = ((page-1)/10)*10+1;
-		int end =  start+9 > last ? last : start+9;
+		int end = Math.min(start + 9, last);
 		int prev = page < 10 ? 0 : start-1;
 		int next = last > end ? end+1 : 0;
 		if(count == 0) first = last = start = end = prev = next = page = 0;

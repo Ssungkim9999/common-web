@@ -5,11 +5,12 @@ import org.apache.commons.io.FilenameUtils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 public class PropertyService {
 
-	private static Class<PropertyService> thisClass = PropertyService.class;
+	private static final Class<PropertyService> thisClass = PropertyService.class;
 	
 	/**
 	 * @since v1.0.0
@@ -26,7 +27,7 @@ public class PropertyService {
 			File f = new File(path, FilenameUtils.getName(file));
 			fis = new FileInputStream(f);
 			properties.load(fis);
-			return new String(properties.getProperty(key).getBytes("ISO-8859-1"), "UTF-8");
+			return new String(properties.getProperty(key).getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
 		} catch(UnsupportedEncodingException e) {
 			LoggingService.error(thisClass, e.getClass()+" during encode to UTF-8.", e);
 			return properties.getProperty(key);

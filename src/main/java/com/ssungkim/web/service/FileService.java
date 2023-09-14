@@ -16,7 +16,7 @@ import java.util.List;
 
 public class FileService {
 	
-	private static Class<FileService> thisClass = FileService.class;
+	private static final Class<FileService> thisClass = FileService.class;
 
 	/**
 	 * @since v1.0.0

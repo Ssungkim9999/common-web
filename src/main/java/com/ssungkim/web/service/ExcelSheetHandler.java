@@ -22,7 +22,7 @@ import java.util.List;
 
 public class ExcelSheetHandler implements XSSFSheetXMLHandler.SheetContentsHandler {
 	
-	private static Class<ExcelSheetHandler> thisClass = ExcelSheetHandler.class;
+	private static final Class<ExcelSheetHandler> thisClass = ExcelSheetHandler.class;
 
 	private int headerCol = 0;
 	private int currentCol = 0;

@@ -61,18 +61,9 @@ public class ViewService {
 		ModelAndView mav = new ModelAndView(errorPage);
 		mav.addObject("errorCode", errorCode);
 		LoggingService.info(className, "Error code ::: "+errorCode);
-		if(param != null) {
-			Set<String> set = param.keySet();
-			Iterator<String> it = set.iterator();
-			while(it.hasNext()) {
-				String key = it.next();
-				Object value = param.get(key);
-				mav.addObject(key, value);
-			}
-		}
-		return mav;
+		return getModelAndView(param, mav);
 	}
-	
+
 	/**
 	 * @since v1.0.0
 	 * @param page 확장자를 포함하지 않는 /WEB-INF 이후 JSP 파일 경로
@@ -89,11 +80,13 @@ public class ViewService {
 		}
 		ModelAndView mav = new ModelAndView("/WEB-INF/"+page+".jsp");
 		LoggingService.info(className, "Direction page ::: "+page);
+		return getModelAndView(param, mav);
+	}
+
+	private static ModelAndView getModelAndView(HashMap<String, Object> param, ModelAndView mav) {
 		if(param != null) {
 			Set<String> set = param.keySet();
-			Iterator<String> it = set.iterator();
-			while(it.hasNext()) {
-				String key = it.next();
+			for (String key : set) {
 				Object value = param.get(key);
 				mav.addObject(key, value);
 			}

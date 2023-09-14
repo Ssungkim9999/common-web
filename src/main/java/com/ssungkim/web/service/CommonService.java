@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 
 public class CommonService {
 	
-	private static Class<CommonService> thisClass = CommonService.class;
+	private static final Class<CommonService> thisClass = CommonService.class;
 	
 	/**
 	 * @since v1.0.0
